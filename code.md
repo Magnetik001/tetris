@@ -16,7 +16,6 @@ weight = int(input("Введите размер игрового поля: "))
 
 table = [[" " for _ in range(weight)] for _ in range(weight)]
 
-# Игровой цикл
 while attempts < 3:
 
     # Вывод всех данных
