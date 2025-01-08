@@ -16,8 +16,10 @@ weight = int(input("Введите размер игрового поля: "))
 
 table = [[" " for _ in range(weight)] for _ in range(weight)]
 
+# Игровой цикл
 while attempts < 3:
 
+    # Вывод всех данных
     os.system("cls")if not anticheat else print(end="")
 
     print("Рекомендуется ввести команду '! help', если вы играете в первый раз") if time == 0 else print(end="")
@@ -49,6 +51,7 @@ while attempts < 3:
 4 - Ход игры
 5 - Счет игры
               
+Команды:
 ! end - закончить игру
 ! help - помощь
               
@@ -59,6 +62,7 @@ while attempts < 3:
         input()
         continue
 
+    # Расстановка новых фигур на игровое поле, а также проверка на наличие ошибок при вводе
     newPos = []
     for i in figure:
         posX, posY = int(x) - 1 + i[0], weight - int(y) + i[1]
@@ -81,6 +85,7 @@ while attempts < 3:
         for i in newPos:
             table[i[0]][i[1]] = "0"
 
+    # Проверка на выигранные столбцы / строчки
     for i in range(len(table)):
         if table[i] == ["0" for _ in range(weight)]:
             table[i] = [" " for _ in range(weight)]
