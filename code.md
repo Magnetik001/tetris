@@ -18,7 +18,6 @@ table = [[" " for _ in range(weight)] for _ in range(weight)]
 
 while attempts < 3:
 
-    # Вывод всех данных
     os.system("cls")if not anticheat else print(end="")
 
     print("Рекомендуется ввести команду '! help', если вы играете в первый раз") if time == 0 else print(end="")
